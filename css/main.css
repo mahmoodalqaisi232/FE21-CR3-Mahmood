@@ -1,0 +1,56 @@
+/* html,body{
+    height: 100%;
+} */
+
+
+
+.myNav{
+    background-color: #77F9D4!important;
+    height: 15vh;
+}
+
+.carousel-image{
+width: 100%;
+height: 70vh;
+}
+
+
+/* StartersCards */
+
+.description-text{
+    font-size: 1.5vh;
+    line-height: 0.9rem;
+    
+} 
+
+
+.card{
+    max-height: 30vh!important;
+    min-height: 30vh!important;
+    flex-direction: row!important;
+    max-width: 50%;
+    min-width: 25%;
+}
+.card-body{
+    max-width: 50%!important;
+    position: relative!important;
+    padding-bottom: 0;
+}
+
+
+
+.card-image{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100vh;
+
+}
+
+.price{
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8rem;
+}
+p{
+    margin-bottom: 1vh !important;
+}
