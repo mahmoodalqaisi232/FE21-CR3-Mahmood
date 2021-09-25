@@ -15,7 +15,7 @@
     <title>Restaurant AmigoS</title>
   </head>
   <body>
-    <header class="container-fluid">
+    <header class="container-fluid p-0">
       <nav class="navbar myNav">
         <div class="container-fluid">
           <span class="navbar-brand m-auto fs-1 fw-bold">AmigoS</span>
@@ -25,7 +25,7 @@
 
     <!-- Hero Section - Carousel  -->
 
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       <div
         id="carouselExampleInterval"
         class="carousel slide"
@@ -76,363 +76,387 @@
       </div>
     </div>
 
-    <!-- Cards Container -->
+    
     <main>
-    <div class="container">
-      <h1 class="text-center py-3">Starters</h1>
-      <!-- Starters -->
+      <div class="container">
+        <h1 class="text-center py-3">Starters</h1>
+        <!-- Starters -->
 
-      <div class="row ">
-        <!-- lINE ROW -->
+        <div class="row d-flex flex-row ">
 
-        <!-- First Card ----------------------------------------------------------------->
+          <!-- First Card ----------------------------------------------------------------->
 
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0 mb-md-1">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Spring Rolls</h5>
-            <p class="card-text description-text">
-              filled with minced vegetables, seafood or meat, folded into a food
-              wrapper made from rice.
-            </p>
-            <div class="price ">
-            <P class=" fw-bold"> 2.99 Euro</P></div>
+          <div class="card col-md-5 col-lg-3 p-0 mb-md-1 d-flex flex-row">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Spring Rolls</h5>
+              <p class="card-text description-text">
+                filled with minced vegetables, seafood or meat, folded into a
+                food wrapper made from rice.
+              </p>
+              <div class="price">
+                <p class="fw-bold">2.99 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 1 -->
+            <div class="card">
+              <img
+                src="/img/Spring-Rolls.jpg"
+                alt="Spring Rolls"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
 
-          <!-- Card Image 1 -->
-          <div class="card">
-            <img
-              src="/img/Spring-Rolls.jpg"
-              alt="Spring Rolls"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
+          <!-- Second Card ------------------------------------------------------------------->
 
-        <!-- Second Card ------------------------------------------------------------------->
+          <div class="card col-lg-3 col-md-5 p-0 mb-md-3 col-md-offset-1">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Tomato Bruschetta</h5>
+              <p class="card-text description-text">
+                a crusty slab of toasted country bread,rubbed with garlic.
+              </p>
+              <div class="price">
+                <p class="fw-bold">1.99 Euro</p>
+              </div>
+            </div>
 
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0 mb-md-3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Tomato Bruschetta</h5>
-            <p class="card-text description-text">
-              a crusty slab of toasted country bread,rubbed with garlic.
-            </p>
-            <div class="price">
-            <P class=" fw-bold"> 1.99 Euro</P></div>
-          </div>
-
-          <!-- Card Image 2 -->
-          <div class="card">
-            <img
-              src="/img/Tomato-Bruschetta.jpg"
-              alt="Tomato-Bruschetta"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-
-        <!-- Third Card --------------------------------------------------------------------->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">French onion Soup</h5>
-            <p class="card-text description-text">
-              Warm, cozy, and flavorful, prepared with
-              beef stock and caramelized onions.
-            </p>
-            <div class="price">
-            <P class=" fw-bold"> 3.49 Euro</P></div>
+            <!-- Card Image 2 -->
+            <div class="card">
+              <img
+                src="/img/Tomato-Bruschetta.jpg"
+                alt="Tomato-Bruschetta"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
 
-          <!-- Card Image 3 -->
-          <div class="card">
-            <img
-              src="/img/french-onion-soup.jpg"
-              alt="french-onion-soup"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
+          <!-- Third Card --------------------------------------------------------------------->
+          <div class="card d-flex flex-row col-lg-3 col-md-5 p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">French onion Soup</h5>
+              <p class="card-text description-text">
+                Warm, cozy, and flavorful, prepared with beef stock and
+                caramelized onions.
+              </p>
+              <div class="price">
+                <p class="fw-bold">3.49 Euro</p>
+              </div>
+            </div>
 
-        <!-- fourth Card ---------------------------------------------------------------------->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Caesar Salad</h5>
-            <p class="card-text description-text">
-              Green salad of romaine lettuce and croutons dressed with lemon
-              juice , olive oil, egg.
-            </p>
-            <div class="price">
-            <P class="fw-bold"> 5.49 Euro</P></div>
-          </div>
-
-          <!-- Card Image 4 -->
-          <div class="card">
-            <img
-              src="/img/caesarSalad.jpeg"
-              alt="caesarSalad"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!---------------------------------Second Container------------------------------------------------------------------>
-
-    <div class="container">
-      <h1 class="text-center py-3">Main Course</h1>
-      <div class="row">
-        <!-- First Card ------------------------------------------------------>
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0 mb-md-3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Grilles Salmon</h5>
-            <p class="card-text description-text">
-              The aroma, flavors, and textures of this dish are sensational!
-            </p>
-            <div class="price">
-            <P class=" fw-bold"> 7.99 Euro</P></div>
+            <!-- Card Image 3 -->
+            <div class="card">
+              <img
+                src="/img/french-onion-soup.jpg"
+                alt="french-onion-soup"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
 
-          <!-- Card Image 1 -->
-          <div class="card">
-            <img
-              src="/img/salmon.jpg"
-              alt="salmon"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-        <!-- Second Card------------------------------------------------------>
+          <!-- fourth Card ---------------------------------------------------------------------->
+          <div class="card d-flex flex-row col-lg-3 col-md-5 p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Caesar Salad</h5>
+              <p class="card-text description-text">
+                Green salad of romaine lettuce and croutons dressed with lemon
+                juice , olive oil, egg.
+              </p>
+              <div class="price">
+                <p class="fw-bold">5.49 Euro</p>
+              </div>
+            </div>
 
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Roasted Beef</h5>
-            <p class="card-text description-text">
-              Roasts are cut from the steer's chuck, or shoulder; the rib and
-              loin areas.
-            </p>
-            <div class="price">
-            <P class=" fw-bold"> 8.99 Euro</P></div>
-          </div>
-
-          <!-- Card Image 2 -->
-          <div class="card">
-            <img src="/img/beef.jpg" alt="Beef" class="card-image img-fluid" />
-          </div>
-        </div>
-        <!-- Third Card --------------------------------------------------------->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Marrakech vegetarian curry</h5>
-            <p class="card-text description-text">
-              This curry is full of veggies: sweet potato, eggplant, spinach,
-              zucchini.
-            </p>
-            <div class="price">
-            <P class=" fw-bold"> 4.99 Euro</P></div>
-          </div>
-
-          <!-- Card Image 3 -->
-          <div class="card">
-            <img
-              src="/img/marrakesh.jpg"
-              alt="Beef"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-        <!-- fourth Card -->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Eggplants Lasagne</h5>
-            <p class="card-text description-text">
-              In between the eggplant slices is a luscious, creamy mix of
-              ricotta, spinach, Parmesan, and mushrooms.
-            </p>
-            <div class="price">
-            <P class="fw-bold"> 9.99 Euro</P></div>
-          </div>
-
-          <!-- Card Image 4 -->
-          <div class="card">
-            <img
-              src="/img/lasagne.jpeg"
-              alt="lasagne"
-              class="card-image img-fluid"
-            />
+            <!-- Card Image 4 -->
+            <div class="card">
+              <img
+                src="/img/caesarSalad.jpeg"
+                alt="caesarSalad"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <!---------------------------------Second Container------------------------------------------------------------------>
 
-    <!---------------------------------Third Container------------------------------------------------------------------>
+      <div class="container">
+        <h1 class="text-center py-3">Main Course</h1>
+        <div class="row d-flex flex-row">
+          <!-- First Card ------------------------------------------------------>
+          <div
+            class="card d-flex flex-row col-lg-3 col-md-5  p-0 mb-md-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Grilled Salmon</h5>
+              <p class="card-text description-text">
+                The aroma, flavors, and textures of this dish are sensational!
+              </p>
+              <div class="price">
+                <p class="fw-bold">7.99 Euro</p>
+              </div>
+            </div>
 
-    <div class="container">
-      <h1 class="text-center py-3">Desserts</h1>
-      <div class="row">
-        <!-- First Card ------------------------------------------------------>
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0 mb-md-3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Carrot Cake</h5>
-            <p class="card-text description-text">
-              It's deeply moist and filled with toasted pecans. 
-            </p>
-            <div class="price">
-            <P class=" fw-bold"> 3.99 Euro</P></div>
+            <!-- Card Image 1 -->
+            <div class="card">
+              <img
+                src="/img/salmon.jpg"
+                alt="salmon"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
+          <!-- Second Card------------------------------------------------------>
 
-          <!-- Card Image 1 -->
-          <div class="card">
-            <img
-              src="/img/carrotCake.jpg"
-              alt="salmon"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-        <!-- Second Card------------------------------------------------------>
+          <div class="card d-flex flex-row col-lg-3 col-md-5 p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Roasted Beef</h5>
+              <p class="card-text description-text">
+                Roasts are cut from the steer's chuck, or shoulder; the rib and
+                loin areas.
+              </p>
+              <div class="price">
+                <p class="fw-bold">8.99 Euro</p>
+              </div>
+            </div>
 
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Mexican Sundae</h5>
-            <p class="card-text description-text">
-              chocolate ice cream are topped with a special hot
-              fudge sauce, whipped cream,coconut flakes, almonds,
-              M&M's.
-            </p>
-            <div class="price">
-            <P class="fw-bold"> 6.99 Euro</P></div>
+            <!-- Card Image 2 -->
+            <div class="card">
+              <img
+                src="/img/beef.jpg"
+                alt="Beef"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
+          <!-- Third Card --------------------------------------------------------->
+          <div class="card d-flex flex-row col-lg-3 col-md-5 p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Marrakech vegetarian curry</h5>
+              <p class="card-text description-text">
+                This curry is full of veggies: sweet potato, eggplant, spinach,
+                zucchini.
+              </p>
+              <div class="price">
+                <p class="fw-bold">4.99 Euro</p>
+              </div>
+            </div>
 
-          <!-- Card Image 2 -->
-          <div class="card">
-            <img
-              src="/img/sundae.jpg"
-              alt="sundae"
-              class="card-image img-fluid"
-            />
+            <!-- Card Image 3 -->
+            <div class="card">
+              <img
+                src="/img/marrakesh.jpg"
+                alt="Beef"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
-        </div>
-        <!-- Third Card --------------------------------------------------------->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Cheese Cake</h5>
-            <p class="card-text description-text">
-              sweet dessert consisting of one or more layers. 
-            </p>
-            <div class="price">
-            <P class=" fw-bold"> 4.50 Euro</P></div>
-          </div>
+          <!-- fourth Card -->
+          <div class="card d-flex flex-row col-lg-3 col-md-5  p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Eggplants Lasagne</h5>
+              <p class="card-text description-text">
+                In between the eggplant slices is a luscious, creamy mix of
+                ricotta, spinach, Parmesan, and mushrooms.
+              </p>
+              <div class="price">
+                <p class="fw-bold">9.99 Euro</p>
+              </div>
+            </div>
 
-          <!-- Card Image 3 -->
-          <div class="card">
-            <img
-              src="/img/cheeseCake.jpg"
-              alt="Chessecake"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-        <!-- fourth Card -->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Coconut Cream Pie</h5>
-            <p class="card-text description-text">
-              dreamy coconut cream pie filled with natural
-              coconut flavor from coconut milk.
-            </p>
-            <div class="price">
-            <P class="fw-bold"> 5.49 Euro</P></div>
-          </div>
-
-          <!-- Card Image 4 -->
-          <div class="card">
-            <img
-              src="/img/Coconut-Cream-Pie-.jpg"
-              alt="lasagne"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!---------------------------------Fourth Container------------------------------------------------------------------>
-
-    <div class="container">
-      <h1 class="text-center py-3">Beverages</h1>
-      <div class="row">
-        <!-- First Card ------------------------------------------------------>
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0 mb-md-3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Nutella Shake</h5>
-            <div class="price">
-              <P class="fw-bold"> 5.49 Euro</P></div>
-          </div>
-
-          <!-- Card Image 1 -->
-          <div class="card">
-            <img
-              src="/img/Nutella.jpg"
-              alt="Nutella Shake"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-        <!-- Second Card------------------------------------------------------>
-
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Mojito</h5>
-            
-            <div class="price">
-              <P class="fw-bold"> 10.49 Euro</P></div>
-          </div>
-
-          <!-- Card Image 2 -->
-          <div class="card">
-            <img
-              src="/img/mojito.jpg"
-              alt="Mojito"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-        <!-- Third Card --------------------------------------------------------->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 offset-md-1 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Beer</h5>
-            
-            <div class="price">
-              <P class="fw-bold"> 1.49 Euro</P></div>
-          </div>
-
-          <!-- Card Image 3 -->
-          <div class="card">
-            <img
-              src="/img/budweiser.jpg"
-              alt="Budweiser"
-              class="card-image img-fluid"
-            />
-          </div>
-        </div>
-        <!-- fourth Card -->
-        <div class="card d-flex flex-row col-lg-3 col-md-5 ms-md-3 p-0">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Coke</h5>
-            <div class="price">
-              <P class="fw-bold"> 2.49 Euro</P></div>
-          </div>
-
-          <!-- Card Image 4 -->
-          <div class="card">
-            <img src="/img/coke1.jpg" alt="coke" class="card-image img-fluid" />
+            <!-- Card Image 4 -->
+            <div class="card">
+              <img
+                src="/img/lasagne.jpeg"
+                alt="lasagne"
+                class="card-image img-fluid"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End of containers  -->
-  </main>
 
-    <footer class="container-fluid">
+      <!---------------------------------Third Container------------------------------------------------------------------>
+
+      <div class="container">
+        <h1 class="text-center py-3">Desserts</h1>
+        <div class="row">
+          <!-- First Card ------------------------------------------------------>
+          <div
+            class="card d-flex flex-row col-lg-3 col-md-5  p-0 mb-md-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Carrot Cake</h5>
+              <p class="card-text description-text">
+                It's deeply moist and filled with toasted pecans.
+              </p>
+              <div class="price">
+                <p class="fw-bold">3.99 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 1 -->
+            <div class="card">
+              <img
+                src="/img/carrotCake.jpg"
+                alt="salmon"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+          <!-- Second Card------------------------------------------------------>
+
+          <div class="card d-flex flex-row col-lg-3 col-md-5  p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mexican Sundae</h5>
+              <p class="card-text description-text">
+                chocolate ice cream are topped with a special hot fudge sauce,
+                whipped cream,coconut flakes, almonds, M&M's.
+              </p>
+              <div class="price">
+                <p class="fw-bold">6.99 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 2 -->
+            <div class="card">
+              <img
+                src="/img/sundae.jpg"
+                alt="sundae"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+          <!-- Third Card --------------------------------------------------------->
+          <div class="card d-flex flex-row col-lg-3 col-md-5  p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Cheese Cake</h5>
+              <p class="card-text description-text">
+                sweet dessert consisting of one or more layers.
+              </p>
+              <div class="price">
+                <p class="fw-bold">4.50 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 3 -->
+            <div class="card">
+              <img
+                src="/img/cheeseCake.jpg"
+                alt="Chessecake"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+          <!-- fourth Card -->
+          <div class="card d-flex flex-row col-lg-3 col-md-5  p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Coconut Cream Pie</h5>
+              <p class="card-text description-text">
+                dreamy coconut cream pie filled with natural coconut flavor from
+                coconut milk.
+              </p>
+              <div class="price">
+                <p class="fw-bold">5.49 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 4 -->
+            <div class="card">
+              <img
+                src="/img/Coconut-Cream-Pie-.jpg"
+                alt="lasagne"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------------------------------Fourth Container------------------------------------------------------------------>
+
+      <div class="container">
+        <h1 class="text-center py-3">Beverages</h1>
+        <div class="row">
+          <!-- First Card ------------------------------------------------------>
+          <div class="card d-flex flex-row col-lg-3 col-md-5 p-0mb-md-3 ">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Nutella Shake</h5>
+              <div class="price">
+                <p class="fw-bold">5.49 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 1 -->
+            <div class="card">
+              <img
+                src="/img/Nutella.jpg"
+                alt="Nutella Shake"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+          <!-- Second Card------------------------------------------------------>
+
+          <div class="card d-flex flex-row col-lg-3 col-md-5  p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mojito</h5>
+
+              <div class="price">
+                <p class="fw-bold">10.49 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 2 -->
+            <div class="card">
+              <img
+                src="/img/mojito.jpg"
+                alt="Mojito"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+          <!-- Third Card --------------------------------------------------------->
+          <div class="card d-flex flex-row col-lg-3 col-md-5  p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Beer</h5>
+
+              <div class="price">
+                <p class="fw-bold">1.49 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 3 -->
+            <div class="card">
+              <img
+                src="/img/budweiser.jpg"
+                alt="Budweiser"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+          <!-- fourth Card -->
+          <div class="card d-flex flex-row col-lg-3 col-md-5  p-0">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Coke</h5>
+              <div class="price">
+                <p class="fw-bold">2.49 Euro</p>
+              </div>
+            </div>
+
+            <!-- Card Image 4 -->
+            <div class="card">
+              <img
+                src="/img/coke1.jpg"
+                alt="coke"
+                class="card-image img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of containers  -->
+    </main>
+
+    <footer class="container-fluid p-0">
       <nav class="navbar myNav mt-5">
         <div class="container-fluid">
           <span class="navbar-brand m-auto fs-1 fw-bold">AmigoS</span>
@@ -445,5 +469,6 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>
