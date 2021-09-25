@@ -1,0 +1,19 @@
+.myNav {
+    background-color: #77f9d4 !important;
+    height: 15vh;
+  }
+  footer{
+      background-color: #77f9d4 !important;
+       height: 15vh;
+  }
+  
+body{
+    margin: 0;
+}
+ @media (min-width: 768px){
+    .hash-list.cols-3 > li:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+} 
+
+
