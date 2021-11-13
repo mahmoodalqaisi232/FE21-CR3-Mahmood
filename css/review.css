@@ -2,18 +2,41 @@
     background-color: #77f9d4 !important;
     height: 15vh;
   }
-  footer{
-      background-color: #77f9d4 !important;
-       height: 15vh;
-  }
-  
-body{
-    margin: 0;
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    background: #EEEEEE;
+    font-family: 'Roboto', sans-serif
 }
- @media (min-width: 768px){
-    .hash-list.cols-3 > li:nth-last-child(-n+3) {
-        border-bottom: none;
-    }
-} 
 
+.card {
+    width: 300px;
+    border: none;
+    border-radius: 15px;
+    padding-bottom: 130px
+}
 
+.adiv {
+    background: #F13355;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 12px;
+    height: 46px
+}
+
+.fa-quote-left {
+    color: #F13355
+}
+
+.name {
+    color: #B0B0B0;
+    font-size: 12px
+}
+
+footer{
+    padding-top: 4vh;
+    background-color: #77f9d4 !important;
+    height: 25vh;
+}
