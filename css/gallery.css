@@ -26,9 +26,9 @@
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 } */
-img:hover{
-    transition: .1s ease-in;
-    transform: scale(1.2);
+img:hover {
+  transition: 0.1s ease-in;
+  transform: scale(1.2);
 }
 
 footer {

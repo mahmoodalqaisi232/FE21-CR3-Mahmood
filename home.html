@@ -5,462 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
     <title>Restaurant AmigoS</title>
   </head>
   <body>
     <header class="container-fluid p-0">
       <nav class="navbar myNav">
-        <div class="container-fluid">
-          <span class="navbar-brand m-auto fs-1 fw-bold">AmigoS</span>
-        </div>
+        <span class="navbar-brand m-auto fw-bold">AmigoS</span>
       </nav>
     </header>
 
     <!-- Hero Section - Carousel  -->
 
-    <div class="container-fluid p-0">
-      <div
-        id="carouselExampleInterval"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="5000">
-            <img
-              src="img/carousel1.jpg"
-              class="d-block w-100 carousel-image"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block"></div>
-          </div>
-          <div class="carousel-item" data-bs-interval="4000">
-            <img
-              src="img/carousel2.jpg"
-              class="d-block w-100 carousel-image"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="4000">
-            <img
-              src="img/carousel3.jpg"
-              class="d-block w-100 carousel-image"
-              alt="..."
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleInterval"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleInterval"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-
+    <div class="container-fluid"><div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active" data-bs-interval="3000"><img src="img/carousel1.jpg" class="d-block carousel-image" alt="..." /><div class="carousel-caption d-none d-md-block"></div></div><div class="carousel-item" data-bs-interval="3000"><img src="img/carousel2.jpg" class="d-block carousel-image" alt="..." /></div><div class="carousel-item" data-bs-interval="3000"><img src="img/carousel3.jpg" class="d-block carousel-image" alt="..." /></div></div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button></div></div>
     
     <main>
-      <div class="container">
-        <h1 class="text-center py-3">Starters</h1>
-
-        <!-- Starters--------------------------------------------------------------------->
-        <div class="row g-sm-2 g-md-2 g-lg-0">
-
-          <!-- First Card ----------------------------------------------------------------->
-
-          <div class="card col-sm-12 col-md-5 col-lg-3 p-0  offset-lg-0 offset-md-1 ">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Spring Rolls</h5>
-              <p class="card-text description-text">
-                filled with minced vegetables, seafood or meat, folded into a
-                food wrapper made from rice.
-              </p>
-              <div class="price">
-                <p class="fw-bold">2.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 1 -->
-            <div class="imgContainer">
-              <img
-                src="img/Spring-Rolls.jpg"
-                alt="Spring Rolls"/>
-            </div>
+      <div class="p-3">
+      <button class="btn btn-outline-dark" type="button" id="all-button">All</button>
+      <button class="btn btn-outline-dark" type="button" id="starters-button">Starters</button>
+      <button class="btn btn-outline-dark" type="button" id="mainCourse-button">Main Course</button>
+      <button class="btn btn-outline-dark" type="button" id="desserts-button">Desserts</button>
+      <button class="btn btn-outline-dark" type="button" id="beverages-button">Beverages</button>
+      <button class="btn btn-success"  type="button"><i class="fa fa-shopping-cart fa-1x"></i></button>
+    </div>
+      <div class="container-fluid" id="menuContainer">
+          <h1 class="text-center section-title">Starters</h1>
+          <div class="row" id="startersRow">
           </div>
-
-          <!-- Second Card ------------------------------------------------------------------->
-
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0 ">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Tomato Bruschetta</h5>
-              <p class="card-text description-text">
-                a crusty slab of toasted country bread,rubbed with garlic.
-              </p>
-              <div class="price">
-                <p class="fw-bold">1.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 2 -->
-            <div class="imgContainer">
-              <img
-                src="img/Tomato-Bruschetta.jpg"
-                alt="Tomato-Bruschetta"/>
-            </div>
+          <h1 class="text-center section-title">Main Course</h1>
+          <div class="row" id="mainCourseRow">
           </div>
-
-          <!-- Third Card --------------------------------------------------------------------->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 offset-lg-0 offset-md-1">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">French onion Soup</h5>
-              <p class="card-text description-text">
-                Warm, cozy, and flavorful, prepared with beef stock and
-                caramelized onions.
-              </p>
-              <div class="price">
-                <p class="fw-bold">3.49 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 3 -->
-            <div class="imgContainer">
-              <img
-                src="img/french-onion-soup.jpg"
-                alt="french-onion-soup"/>
-            </div>
+          <h1 class="text-center section-title">Desserts</h1>
+          <div class="row" id="dessertsRow">
           </div>
-
-          <!-- fourth Card ---------------------------------------------------------------------->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Caesar Salad</h5>
-              <p class="card-text description-text">
-                Green salad of romaine lettuce and croutons dressed with lemon
-                juice , olive oil, egg.
-              </p>
-              <div class="price">
-                <p class="fw-bold">5.49 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 4 -->
-            <div class="imgContainer">
-              <img
-                src="img/caesarSalad.jpeg"
-                alt="caesarSalad"/>
-            </div>
+          <h1 class="text-center section-title">Beverages</h1>
+          <div class="row" id="beveragesRow">
           </div>
-        </div>
-      </div>
-      <!---------------------------------Second Container------------------------------------------------------------------>
+    </div>
+    <table class="table" id="cartContainer">
+      <thead>
+        <tr> 
+          <th scope="col" >Items</th>
+          <th scope="col" >Quantitty</th>
+          <th scope="col" >Price</th>
 
-      <div class="container">
-        <h1 class="text-center py-3">Main Course</h1>
-        <div class="row g-sm-2 g-md-2 g-lg-0">
-          <!-- First Card ------------------------------------------------------>
-          <div class="card col-sm-12 col-md-5 col-lg-3 p-0  offset-lg-0 offset-md-1 ">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Grilled Salmon</h5>
-              <p class="card-text description-text">
-                The aroma, flavors, and textures of this dish are sensational!
-              </p>
-              <div class="price">
-                <p class="fw-bold">7.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 1 -->
-            <div class="imgContainer">
-              <img
-                src="img/salmon1.jpg"
-                alt="Spring Rolls" class="img-fluid"/>
-            </div>
-          </div>
-          <!-- Second Card------------------------------------------------------>
-
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Roasted Beef</h5>
-              <p class="card-text description-text">
-                Roasts are cut from the steer's chuck, or shoulder; the rib and
-                loin areas.
-              </p>
-              <div class="price">
-                <p class="fw-bold">8.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 2 -->
-            <div class="imgContainer">
-              <img
-                src="img/beef.jpg" alt="Beef"
-              />
-            </div>
-          </div>
-          <!-- Third Card --------------------------------------------------------->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 offset-lg-0 offset-md-1">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Marrakech vegetarian curry</h5>
-              <p class="card-text description-text">
-                This curry is full of veggies: sweet potato, eggplant, spinach,
-                zucchini.
-              </p>
-              <div class="price">
-                <p class="fw-bold">4.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 3 -->
-            <div class="imgContainer">
-              <img
-                src="img/marrakesh.jpg"
-                alt="Beef"
-              
-              />
-            </div>
-          </div>
-          <!-- fourth Card -->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Eggplants Lasagne</h5>
-              <p class="card-text description-text">
-                In between the eggplant slices is a luscious, creamy mix of
-                ricotta, spinach.
-              </p>
-              <div class="price">
-                <p class="fw-bold">9.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 4 -->
-            <div class="imgContainer">
-              <img
-                src="img/lasagne.jpeg"
-                alt="lasagne"
-               
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!---------------------------------Third Container------------------------------------------------------------------>
-
-      <div class="container">
-        <h1 class="text-center py-3">Desserts</h1>
-        <div class="row g-sm-2 g-md-2 g-lg-0">
-          <!-- First Card ------------------------------------------------------>
-          <div
-            class="card col-sm-12 col-md-5 col-lg-3 p-0  offset-lg-0 offset-md-1">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Carrot Cake</h5>
-              <p class="card-text description-text">
-                It's deeply moist and filled with toasted pecans.
-              </p>
-              <div class="price">
-                <p class="fw-bold">3.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 1 -->
-            <div class="imgContainer">
-              <img
-                src="img/carrotCake.jpg"
-                alt="salmon"
-                
-              />
-            </div>
-          </div>
-          <!-- Second Card------------------------------------------------------>
-
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Mexican Sundae</h5>
-              <p class="card-text description-text">
-              hot fudge sauce,
-                whipped cream,coconut flakes, almonds, M&M's.
-              </p>
-              <div class="price">
-                <p class="fw-bold">6.99 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 2 -->
-            <div class="imgContainer">
-              <img
-                src="img/sundae.jpg"
-                alt="sundae"
-                
-              />
-            </div>
-          </div>
-          <!-- Third Card --------------------------------------------------------->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 offset-lg-0 offset-md-1">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Cheese Cake</h5>
-              <p class="card-text description-text">
-                sweet dessert consisting of one or more layers.
-              </p>
-              <div class="price">
-                <p class="fw-bold">4.50 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 3 -->
-            <div class="imgContainer">
-              <img
-                src="img/cheeseCake.jpg"
-                alt="Chessecake"
-                
-              />
-            </div>
-          </div>
-          <!-- fourth Card -->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Coconut Cream Pie</h5>
-              <p class="card-text description-text">
-                dreamy coconut cream pie filled with natural coconut flavor from
-                coconut milk.
-              </p>
-              <div class="price">
-                <p class="fw-bold">5.49 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 4 -->
-            <div class="imgContainer">
-              <img
-                src="img/Coconut-Cream-Pie-.jpg"
-                alt="lasagne"
-                
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!---------------------------------Fourth Container------------------------------------------------------------------>
-
-      <div class="container">
-        <h1 class="text-center py-3">Beverages</h1>
-        <div class="row g-sm-2 g-md-2 g-lg-0">
-          <!-- First Card ------------------------------------------------------>
-          <div class="card col-sm-12 col-md-5 col-lg-3 p-0  offset-lg-0 offset-md-1 ">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Nutella Shake</h5>
-              <div class="price">
-                <p class="fw-bold">5.49 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 1 -->
-            <div class="imgContainer">
-              <img
-                src="img/Nutella.jpg"
-                alt="Nutella Shake"/>
-            </div>
-          </div>
-          <!-- Second Card------------------------------------------------------>
-
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Mojito</h5>
-
-              <div class="price">
-                <p class="fw-bold">10.49 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 2 -->
-            <div class="imgContainer">
-              <img
-                src="img/mojito.jpg"
-                alt="Mojito"
-                
-              />
-            </div>
-          </div>
-          <!-- Third Card --------------------------------------------------------->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 offset-lg-0 offset-md-1">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Beer</h5>
-
-              <div class="price">
-                <p class="fw-bold">1.49 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 3 -->
-            <div class="imgContainer">
-              <img
-                src="img/budweiser.jpg"
-                alt="Budweiser"
-                
-              />
-            </div>
-          </div>
-          <!-- fourth Card -->
-          <div class="card col-sm-12 col-lg-3 col-md-5 p-0 ms-md-2 ms-lg-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Coke</h5>
-              <div class="price">
-                <p class="fw-bold">2.49 Euro</p>
-              </div>
-            </div>
-
-            <!-- Card Image 4 -->
-            <div class="imgContainer">
-              <img
-                src="img/coke1.jpg"
-                alt="coke"
-                
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End of containers  -->
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+      <tfoot>
+        <tr >
+          <td colspan="3" class="fw-bold text-center">Total <span id="totalContainer">0.00 €</span></td>
+        </tr>
+      </tfoot>
+    </table>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
+    <br />
 
     <footer class="container-fluid p-0">
-      <nav class="navbar">
-        <div class="container-fluid d-flex justify-content-lg-start">
-          <p><a href="#.html" class="link-dark text-decoration-none fw-bold fs-5 ">Menu</a></p>
-          <p class="ms-2"><a href="gallery.html" class="link-dark text-decoration-none fw-bold fs-5 ">Gallery</a></p>
-          <p class="ms-2"><a href="Review.html" class="link-dark text-decoration-none fw-bold fs-5">Reviews</a></p>
-          <span id="footerLogo" class="navbar-brand  fs-1 fw-bold flex-grow-1 text-end">AmigoS</span>
-        </div>
-      </nav>
+      <div class="container-fluid d-flex justify-content-lg-start">
+        <p>
+          <a href="#.html" class="link-dark text-decoration-none fw-bold fs-5"
+            >Menu</a
+          >
+        </p>
+        <p class="ms-2">
+          <a
+            href="gallery.html"
+            class="link-dark text-decoration-none fw-bold fs-5"
+            >Gallery</a
+          >
+        </p>
+        <p class="ms-2">
+          <a
+            href="Review.html"
+            class="link-dark text-decoration-none fw-bold fs-5"
+            >Reviews</a
+          >
+        </p>
+        <span
+          id="footerLogo"
+          class="navbar-brand fs-1 fw-bold flex-grow-1 text-end"
+          >AmigoS</span
+        >
+      </div>
     </footer>
-
+    <script src="js/items.json"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

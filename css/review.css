@@ -1,42 +1,27 @@
+footer,
 .myNav {
-    background-color: #77f9d4 !important;
-    height: 15vh;
-  }
+  background-color: #77f9d4 !important;
+  height: 15%;
+}
+.myNav span {
+  font-size: 2.5vw;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 body {
-    background: #EEEEEE;
-    font-family: 'Roboto', sans-serif
+  background: #eeeeee;
+  font-family: "Roboto", sans-serif;
 }
-
 .card {
-    width: 300px;
-    border: none;
-    border-radius: 15px;
-    padding-bottom: 130px
+  border: none;
 }
 
-.adiv {
-    background: #F13355;
-    border-radius: 15px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    font-size: 12px;
-    height: 46px
+.user-content p {
+  margin-top: 5px;
+  font-size: 12px;
 }
 
-.fa-quote-left {
-    color: #F13355
-}
-
-.name {
-    color: #B0B0B0;
-    font-size: 12px
-}
-
-footer{
-    padding-top: 4vh;
-    background-color: #77f9d4 !important;
-    height: 25vh;
+.ratings i {
+  color: blue;
 }
