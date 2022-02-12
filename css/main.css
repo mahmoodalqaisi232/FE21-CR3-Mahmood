@@ -1,5 +1,39 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Saira:wght@100&display=swap');
+
+body,html {
   height: 100%;
+}
+*{
+ font-family: 'Saira', sans-serif;
+ font-weight:900   ;
+}
+.myNav {
+  background-color: #46ce7ac4;
+  width:100% ;
+  height: 5vw;
+}
+.logo{
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:3vw;
+  font-family: 'Comforter Brush', cursive;  
+}
+footer{
+  background-color: #46ce7ac4;
+}
+.footerMenu{
+  display: flex;
+  justify-content: space-around;
+  padding: 3vw;
+  font-weight: bolder;
+  width: 25%;
+}
+.footerLogo{
+  font-family: 'Comforter Brush', cursive; 
+  font-size:3vw;
 }
 #cartContainer{
   background-color: azure;
@@ -10,33 +44,23 @@ body {
   right: 0;
   display: none;
 }
-td{
-height: 3vw!important;
+.carousel-image{
+  object-fit: cover!important;
+  object-position: center!important;
+}
+.btnFilter{
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 main{
   position: relative;
 }
 
-#mainRow{
-  width: 100%;
-  margin: 0 auto;
-  gap: 3vw;
-}
+
 .section-title{
   text-align: center;
+  font-weight: bolder;
   padding: 2vw;
-}
-
-.myNav {
-  background-color: #6ebda6dc;
-  height: 10vh;
-}
-.myNav span {
-  font-size: 2.5vw;
-}
-footer {
-  background-color: #6ebda6dc;
-  height: 15vh;
 }
 
 .carousel-image {
@@ -47,79 +71,219 @@ object-position: bottom;
 }
 
 /* Cards and their Images */
-
-.description-text {
-  margin-bottom: 0 !important;
-}
 .card {
   flex-direction: row;
-  min-height: 50%;
-  max-height: 50%;
+  height: 40vh;
+  background-color: rgba(250, 250, 250, 0.739);
 }
+.card-title{
+  font-weight: bolder;
+}
+.card-body{
+  position: relative;
+}
+.card-body:first-child(){
+  padding: 0;
+}
+.description-text{
+  padding-top: 0.3vw;
+ font-size: 0.8vw;
+ text-align: justify;
+  word-spacing:2px;
+}
+
+.card-btn{
+  font-size: 1vw;
+  position: absolute;
+  bottom: 4%;
+  visibility: visible;
+}
+.card-btn-hidden{
+  visibility:hidden;
+  font-size: 1vw;
+  position: absolute;
+  bottom: 4%;
+}
+
 
 /* image container */
 .imgContainer {
-  max-height: 100% !important;
-  min-height: 30vh !important;
-  max-width: 50% !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.priceLabel{
+  position: absolute;
+  background-color: rgba(35, 57, 77, 0.938);
+  color:whitesmoke;
+  right:0;
+  top: 0;
+  padding: 0.4vw;
 }
 .imgContainer > img {
-  object-fit: cover;
+  object-fit:cover;
   width: 100%;
-  min-height: 100%;
-}
-.card-body {
-  max-width: 50% !important;
-  position: relative !important;
-  padding-bottom: 0;
+  height:100%;
+
 }
 
-/* .price {
-  position: absolute;
-  bottom: 0 !important;
-  font-size: 0.8rem;
-} */
-p {
-  margin: 0;
-  font-size: 1.5vw;
+.price {
+  font-size: 1.2vw;
+  color: rgba(129, 121, 9, 0.952);
 }
+/* Big Screens */
 
-/* ------------ MediaQueries -----------  */
-
-/* For Extra Large Screens  */
-@media screen and (min-width: 1200px) {
-  .description-text {
-    font-size: 1.1em;
-    line-height: 1.1em;
+/* Laptop */
+@media screen and (min-width: 1024px) {
+  .card-title{
+    font-size:1.4vw;
+  }
+  .description-text{
+    font-size:0.9vw;
+    overflow: hidden;
+  }
+  footer p{
+    font-size: 1.7vw;
   }
 }
-
-/* For Large Screens */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .description-text {
-    font-size: 0.7em;
-    line-height: 1.2em;
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width:1023px) {
+  .myNav {
+    height: 8vw;
   }
-  h5 {
-    font-size: 1rem;
+  .logo{
+    height: 8vw; 
+  }
+  .section-title{
+    padding: 4vw 0 2vw;
+  }
+  .card-title{
+    font-size:3.2vw;
+  }
+  .description-text{
+    font-size: 1.7vw;
+  }
+  .card-btn{
+    font-size: medium;
+  }
+  footer p{
+    margin-left: 1vw;
   }
 }
-
-/* For Medium Size Screens  */
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .description-text {
-    font-size: 1.7vh;
+/* Mobile */
+@media screen and (min-width: 425px) and (max-width:767px){
+  .myNav {
+    height: 12vw;
   }
-  h5 {
-    font-size: 1rem;
+  .logo{
+    font-size: 6vw;
+    height: 12vw; 
+  }
+  .footerMenu{
+    width: 50%;
+  }
+  .footerLogo{
+    width: 50%;
+    font-size: 6vw;
+  }
+  .card-title{
+    font-size:5vw;
+  }
+  .description-text{
+    font-size: 3.1vw;
+  }
+  .card-btn{
+    font-size: medium;
+  }
+  .section-title{
+    padding: 4vw 0 2vw;
+  }
+  .filterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btnFilter{
+    margin: 1vw;
   }
 }
-
-/* For Small Screens  */
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  .description-text {
-    font-size: 1.1em;
+/* Small Screens */
+@media screen and (min-width: 375px) and (max-width:424px) {
+  .myNav {
+    height: 12vw;
+  }
+  .logo{
+    font-size: 8vw;
+    height: 12vw; 
+  }
+  .footerMenu{
+    width: 50%;
+  }
+  .footerLogo{
+    width: 50%;
+    font-size: 8vw;
+  }
+  footer p{
+    margin: 1vw;
+  }
+  .card-title{
+    font-size:7vw;
+  }
+  .description-text{
+    font-size: 3.4vw;
+  }
+  .card-btn{
+    font-size: medium;
+  }
+  .section-title{
+    padding: 4vw 0 2vw;
+  }
+  .filterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btnFilter{
+    margin: 1vw;
+  }
+}
+/* tiny Screens */
+@media screen and (max-width:374px) {
+  .myNav {
+    height: 14vw;
+  }
+  .logo{
+    font-size: 9vw;
+    height: 14vw; 
+  }
+  .footerMenu{
+    width: 60%;
+  }
+  .footerLogo{
+    width: 40%;
+    font-size: 9vw;
+  }
+  footer p{
+    margin: 1vw;
+  }
+  .card-title{
+    font-size:7vw;
+  }
+  .description-text{
+    font-size: 4vw;
+  }
+  .card-btn{
+    font-size: small;
+  }
+  .section-title{
+    padding: 4vw 0 2vw;
+  }
+  .filterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btnFilter{
+    margin: 1vw;
   }
 }

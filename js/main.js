@@ -1,98 +1,80 @@
-var parsedStarters = JSON.parse(Starters);
-var parsedMain = JSON.parse(MainCourse);
-var parsedDesserts = JSON.parse(Desserts);
-var parsedBev = JSON.parse(Beverages);
-
+var parsedStarters = JSON.parse(Starters);var parsedMain = JSON.parse(MainCourse);var parsedDesserts = JSON.parse(Desserts);var parsedBev = JSON.parse(Beverages);
 var products = [...parsedStarters,...parsedMain,...parsedDesserts,...parsedBev];
 var menuContainer= document.getElementById("menuContainer");
-var log = console.log;
-function printAllBefore() {
-  Printfunction(parsedStarters,"startersRow");
-  Printfunction(parsedMain,"mainCourseRow");
-  Printfunction(parsedDesserts,"dessertsRow");
-  Printfunction(parsedBev,"beveragesRow");
-  }
-  printAllBefore();
-
-  function printAllAfter() {
-    menuContainer.innerHTML=" ";
-    menuContainer.innerHTML=(`<h1 class="text-center section-title">Starters</h1>
-    <div class="row" id="startersRow">
-    </div>
-    <h1 class="text-center section-title">Main Course</h1>
-    <div class="row" id="mainCourseRow">
-    </div>
-    <h1 class="text-center section-title">Desserts</h1>
-    <div class="row" id="dessertsRow">
-    </div>
-    <h1 class="text-center section-title">Beverages</h1>
-    <div class="row" id="beveragesRow">
-    </div>`)
-    printAllBefore()
-  }
-
+Printfunction(parsedStarters,"startersRow");Printfunction(parsedMain,"mainCourseRow");Printfunction(parsedDesserts,"dessertsRow");Printfunction(parsedBev,"beveragesRow");
 function Printfunction (arr,id) {
     for (val1 of arr){
       document.getElementById(id).innerHTML +=`
-        <div class="card col-sm-12 col-md-5 col-lg-3 p-0 offset-lg-0 offset-md-1">
-        <div class="card-body">
-          <h5 class="card-title fw-bold"> ${val1.title} </h5>
-          <p class="card-text description-text"> ${val1.description? val1.description: document.getElementsByClassName("description-text").innerHTML=""}</p>
-          <p class="price">Price: ${val1.price}</p>
-          <button class="btn btn-success card-btn">Add to Cart <i class="fa fa-cart-plus fa-lg"></i></button>
+        <div class="card col-sm-12 col-md-6 col-lg-3 p-0 offset-lg-0 g-md-4 g-3">
+        <div class="card-body d-flex flex-column w-50">
+          <h5 class="card-title text-start"> ${val1.title} </h5>
+          <p class=" description-text"> ${val1.description? val1.description: document.getElementsByClassName("description-text").innerHTML=""}</p>
+          <button class="btn btn-success card-btn">Add to Cart <i class="fa fa-cart-plus"></i></button>
         </div>
-        <figure class="imgContainer m-0">
+        <figure class="imgContainer m-0 w-50">
+        <span class="priceLabel">${val1.price} €</span>
           <img src="${val1.image}" alt="${val1.title}"/>
         </figure>
-      </div>`
-    }
-}
-function printSeparate(x) {
-  menuContainer.innerHTML=" "
-  menuContainer.innerHTML = `<div class="container-fluid">
-  <div class="row" id="mainRow"</div>
-  </div>`
-    for (val of x){
-        document.getElementById("mainRow").innerHTML +=` 
-          <div class="card col-4 pe-0 offset-1">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">${val.title}</h5>
-            <p class="card-text description-text"> ${val.description? val.description: document.getElementsByClassName("description-text").innerHTML=""}</p>
-            <p class="price">Price: ${val.price}</p>
-            <button class="btn btn-success">add</button>
-          </div>
-          <figure class="imgContainer m-0">
-            <img src="${val.image}" alt="${val.title}"/>
-          </figure>
-        </div>`
-      }
-}
-document.getElementById("all-button").addEventListener('click', function () {printAllAfter()})
-document.getElementById("starters-button").addEventListener('click', function () {printSeparate(parsedStarters)})
-document.getElementById("mainCourse-button").addEventListener('click', function () {printSeparate(parsedMain)})
-document.getElementById("desserts-button").addEventListener('click', function () {printSeparate(parsedDesserts)})
-document.getElementById("beverages-button").addEventListener('click', function () {printSeparate(parsedBev)})
+      </div>`}}
+var sectionTitles= document.querySelectorAll("h1");
+document.getElementById("all-button").addEventListener('click', function () {
+  document.getElementById("startersRow").style.display="flex"
+  document.getElementById("mainCourseRow").style.display="flex"
+  document.getElementById("dessertsRow").style.display="flex"
+  document.getElementById("beveragesRow").style.display="flex"
+  sectionTitles.forEach((el)=>{el.style.display="block"});
+})
+document.getElementById("starters-button").addEventListener('click', function () {
+  document.getElementById("startersRow").style.display="flex"
+    document.getElementById("mainCourseRow").style.display="none"
+    document.getElementById("dessertsRow").style.display="none"
+    document.getElementById("beveragesRow").style.display="none"
+    sectionTitles.forEach((el,index)=>  index==0 ? el.style.display="block" : el.style.display="none");
+})
+ document.getElementById("mainCourse-button").addEventListener('click', function () {
+  document.getElementById("startersRow").style.display="none"
+  document.getElementById("mainCourseRow").style.display="flex"
+  document.getElementById("dessertsRow").style.display="none"
+  document.getElementById("beveragesRow").style.display="none"
+  sectionTitles.forEach((el,index)=>  index==1 ? el.style.display="block" : el.style.display="none");
+  })
+ document.getElementById("desserts-button").addEventListener('click', function () {
+  document.getElementById("startersRow").style.display="none"
+  document.getElementById("mainCourseRow").style.display="none"
+  document.getElementById("dessertsRow").style.display="flex"
+  document.getElementById("beveragesRow").style.display="none"
+  sectionTitles.forEach((el,index)=>  index==2 ? el.style.display="block" : el.style.display="none");
+  })
+ document.getElementById("beverages-button").addEventListener('click', function () {
+  document.getElementById("startersRow").style.display="none"
+  document.getElementById("mainCourseRow").style.display="none"
+  document.getElementById("dessertsRow").style.display="none"
+  document.getElementById("beveragesRow").style.display="flex"
+  sectionTitles.forEach((el,index)=>  index==3 ? el.style.display="block" : el.style.display="none");
+  })
 
 const cartItems = [];
 var totalSum=[];
-var sum=0;
 
-function addtoCart(item) {
+function addtoCart(item,i) {
     if(cartItems.length==0){
       cartItems.push(item);
+      totalSum.push(item.price);
+      total()
     }else if(cartItems.find((val) =>val.title == item.title)){
       item.qtty++;
+      totalSum[i]= +(item.qtty * item.price).toFixed(2)
+      total()
     }else{
       cartItems.push(item);
+      totalSum.push(item.price)
     }
 }
-
 let buttons = document.getElementsByClassName("card-btn");
 for(let i =0; i<buttons.length;i++){
   buttons[i].addEventListener('click',function(){
-    addtoCart(products[i])
-    createTableRow(i)
-
+    addtoCart(products[i],i);
+    createTableRow(i);
   })
 }
 function createTableRow() {
@@ -106,11 +88,11 @@ function createTableRow() {
        <span class="fw-bold fs-5 p-1 countContainer">${val.qtty}</span>
       <button class="btn btn-success qttyplus">+</button>
    </td>
-   <td class="fs-5 priceContainer">${sum=(val.price * val.qtty).toFixed(2)}</td>
+   <td class="fs-5 priceContainer">${(val.price * val.qtty).toFixed(2)}</td>
  </tr>`;
 }
-  totalSum.push(+sum);
   total()
+    
 
   var plusButtons= document.getElementsByClassName("qttyplus");
   var minusButtons =document.getElementsByClassName("qttyminus");
@@ -124,45 +106,48 @@ function createTableRow() {
  }
 }
 function plusQtty(i){
+  let sum=cartItems[i].qtty * cartItems[i].price;
   cartItems[i].qtty++;
   document.getElementsByClassName("countContainer")[i].innerHTML = cartItems[i].qtty;
-  document.getElementsByClassName("priceContainer")[i].innerHTML = (cartItems[i].qtty * cartItems[i].price).toFixed(2);
-  totalSum.push(+cartItems[i].price.toFixed(2));
-  total()
+  document.getElementsByClassName("priceContainer")[i].innerHTML = (sum).toFixed(2);
+  if(cartItems[i].qtty >=2){
+    let sumAfterAdd= +(cartItems[i].qtty * cartItems[i].price).toFixed(2);
+    totalSum[i]=sumAfterAdd;
+    document.getElementsByClassName("priceContainer")[i].innerHTML = (sumAfterAdd).toFixed(2);
+    total()
+    log(totalSum)
+    }
 }
-
 function minusQtty(i) {
   if(cartItems[i].qtty>=2){
   cartItems[i].qtty--;
   document.getElementsByClassName("countContainer")[i].innerHTML = cartItems[i].qtty;
   document.getElementsByClassName("priceContainer")[i].innerHTML = (cartItems[i].qtty * cartItems[i].price).toFixed(2);
-  totalSum.splice(i,1);
-  total()
+  totalSum[i]= +(cartItems[i].qtty * cartItems[i].price).toFixed(2);
+  total();
+  log(totalSum)
 }else{
   removeItem(i)
-  document.getElementById('totalContainer').innerHTML = "0.00 €";
+  log(totalSum)
 }
 }
 function total() {
   let FinalSum= totalSum.reduce((pre,curr)=>{
     let resultSum =+(pre + curr).toFixed(2);
     return resultSum
-  })
+  },0)
   document.getElementById('totalContainer').innerHTML = FinalSum + " €";
+  if(FinalSum==0){
+    document.getElementById('totalContainer').innerHTML ="0.00 €";
+  }
 }
 function removeItem(i) {
-  cartItems.splice(i,1);
-  createTableRow();    
+   totalSum.splice(i,1);
+   cartItems.splice(i,1);
+   total()
+   createTableRow(); 
+  
 }
-
-
-
-
-
-
-
-
-
 // // Function to calculate the Invoice with 4 Parameters
 // function calculateInvoice(starterPrice,maindishPrice,dessertPrice,beveragePrice){
 //     let Sum = Math.ceil(starterPrice) + Math.ceil(maindishPrice) + Math.ceil(dessertPrice) + Math.ceil(beveragePrice);
@@ -231,5 +216,8 @@ function removeItem(i) {
 
 
 
-
-
+// var test2 =[13,4,5,612,31]
+// log(test2)
+// var test3=test2.splice(2,1)
+// log(test3)
+// log(test2)

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- Bootstrap Link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
@@ -13,29 +14,50 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
+ 
     <title>Restaurant AmigoS</title>
   </head>
   <body>
     <header class="container-fluid p-0">
-      <nav class="navbar myNav">
-        <span class="navbar-brand m-auto fw-bold">AmigoS</span>
+      <nav class="myNav">
+        <div class="logo">AmigoS</div>
       </nav>
     </header>
 
     <!-- Hero Section - Carousel  -->
 
-    <div class="container-fluid"><div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active" data-bs-interval="3000"><img src="img/carousel1.jpg" class="d-block carousel-image" alt="..." /><div class="carousel-caption d-none d-md-block"></div></div><div class="carousel-item" data-bs-interval="3000"><img src="img/carousel2.jpg" class="d-block carousel-image" alt="..." /></div><div class="carousel-item" data-bs-interval="3000"><img src="img/carousel3.jpg" class="d-block carousel-image" alt="..." /></div></div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button></div></div>
+    <div class="container-fluid">
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="img/carousel1.webp" class="d-block carousel-image" alt="Restaurant" />
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="img/carousel2.webp" class="d-block carousel-image" alt="Food" />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="img/carousel3.webp" class="d-block carousel-image" alt="Food" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+        </div></div>
     
     <main>
-      <div class="p-3">
-      <button class="btn btn-outline-dark" type="button" id="all-button">All</button>
-      <button class="btn btn-outline-dark" type="button" id="starters-button">Starters</button>
-      <button class="btn btn-outline-dark" type="button" id="mainCourse-button">Main Course</button>
-      <button class="btn btn-outline-dark" type="button" id="desserts-button">Desserts</button>
-      <button class="btn btn-outline-dark" type="button" id="beverages-button">Beverages</button>
-      <button class="btn btn-success"  type="button"><i class="fa fa-shopping-cart fa-1x"></i></button>
+      <div class="p-4 filterContainer">
+      <button class="btn btn-outline-dark btnFilter" type="button" id="all-button">All</button>
+      <button class="btn btn-outline-dark btnFilter" type="button" id="starters-button">Starters</button>
+      <button class="btn btn-outline-dark btnFilter" type="button" id="mainCourse-button">Main Course</button>
+      <button class="btn btn-outline-dark btnFilter" type="button" id="desserts-button">Desserts</button>
+      <button class="btn btn-outline-dark btnFilter" type="button" id="beverages-button">Beverages</button>
+      <button class="btn btn-success"  type="button"><i class="fa fa-shopping-cart fa-lg"></i></button>
     </div>
-      <div class="container-fluid" id="menuContainer">
+      <div class="container-fluid p-4" id="menuContainer">
           <h1 class="text-center section-title">Starters</h1>
           <div class="row" id="startersRow">
           </div>
@@ -69,36 +91,13 @@
     </main>
     <br />
     <br />
-    <br />
-    <br />
-
-    <footer class="container-fluid p-0">
-      <div class="container-fluid d-flex justify-content-lg-start">
-        <p>
-          <a href="#.html" class="link-dark text-decoration-none fw-bold fs-5"
-            >Menu</a
-          >
-        </p>
-        <p class="ms-2">
-          <a
-            href="gallery.html"
-            class="link-dark text-decoration-none fw-bold fs-5"
-            >Gallery</a
-          >
-        </p>
-        <p class="ms-2">
-          <a
-            href="Review.html"
-            class="link-dark text-decoration-none fw-bold fs-5"
-            >Reviews</a
-          >
-        </p>
-        <span
-          id="footerLogo"
-          class="navbar-brand fs-1 fw-bold flex-grow-1 text-end"
-          >AmigoS</span
-        >
-      </div>
+    <footer class="container-fluid p-0 d-flex">
+      <div class="footerMenu">
+      <p>Menu</p>
+      <p>Gallery</p>
+      <p>Reviews</p>
+    </div>
+      <div class="flex-grow-1 text-end p-3 footerLogo w-50 ">AmigoS</div>
     </footer>
     <script src="js/items.json"></script>
     <script

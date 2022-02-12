@@ -2,25 +2,25 @@ let Starters = `[{
     "title":"Spring Rolls",
     "description":"filled with minced vegetables, seafood or meat, folded into a food wrapper made from rice.",
     "price": 2.99,
-    "image":"./img/Spring-Rolls.jpg",
+    "image":"./img/Spring-Rolls.webp",
     "qtty":1
 },{
     "title":"Tomato Bruschetta",
-    "description":"filled with minced vegetables, seafood or meat, folded into a food wrapper made from rice.",
+    "description":"thick slices of bread grilled, rubbed with garlic, drizzled with olive oil, often topped with tomatoes and herbs, and usually served as an appetizer.",
     "price": 1.99,
-    "image":"./img/Tomato-Bruschetta.jpg",
+    "image":"./img/Tomato-Bruschetta.webp",
     "qtty":1
 },{
     "title":"French onion Soup",
-    "description":"filled with minced vegetables, seafood or meat, folded into a food wrapper made from rice.",
+    "description":"Warm, cozy, and flavorful, this French onion soup is prepared with beef stock and caramelized onions. ",
     "price": 3.49,
-    "image":"./img/french-onion-soup.jpg",
+    "image":"./img/french-onion-soup.webp",
     "qtty":1
 },{
     "title":"Caesar Salad",
-    "description":"filled with minced vegetables, seafood or meat, folded into a food wrapper made from rice.",
+    "description":"a tossed salad usually made of romaine, garlic, anchovies, and croutons and dressed with olive oil, coddled egg, lemon juice, and grated cheese.",
     "price": 5.49,
-    "image":"./img/caesarSalad.jpeg",
+    "image":"./img/caesarSalad.webp",
     "qtty":1
 }]`
 
@@ -28,25 +28,25 @@ let MainCourse =`[{
     "title":"Grilled Salmon",
     "description":"The aroma, flavors, and textures of this dish are sensational!",
     "price": 7.99,
-    "image":"./img/salmon1.jpg",
+    "image":"./img/salmon1.webp",
     "qtty":1
 },{
     "title":"Roasted Beef",
     "description":"Roasts are cut from the steer's chuck, or shoulder; the rib and loin areas.",
     "price": 8.99,
-    "image":"./img/beef.jpg",
+    "image":"./img/beef.webp",
     "qtty":1
 },{
     "title":"Marrakech vegetarian curry",
     "description":"This curry is full of veggies: sweet potato, eggplant, spinach, zucchini.",
     "price": 4.99,
-    "image":"./img/marrakesh.jpg",
+    "image":"./img/marrakesh.webp",
     "qtty":1
 },{
     "title":"Eggplants Lasagne",
     "description":"In between the eggplant slices is a luscious, creamy mix of ricotta, spinach.",
     "price": 9.99,
-    "image":"./img/lasagne.jpeg",
+    "image":"./img/lasagne.webp",
     "qtty":1
 }]`
 
@@ -54,47 +54,46 @@ let Desserts =`[{
     "title":"Carrot Cake",
     "description":"It's deeply moist and filled with toasted pecans.",
     "price": 3.99,
-    "image":"./img/carrotCake.jpg",
+    "image":"./img/carrotCake.webp",
     "qtty":1
 },{
     "title":"Mexican Sundae",
     "description":"hot fudge sauce, whipped cream,coconut flakes, almonds, M&M's.",
     "price": 6.99,
-    "image":"./img/sundae.jpg",
+    "image":"./img/sundae.webp",
     "qtty":1
 },{
     "title":"Cheese Cake",
     "description":"sweet dessert consisting of one or more layers.",
-    "price": 4.50,
-    "image":"./img/cheeseCake.jpg",
+    "price": 4.49,
+    "image":"./img/cheeseCake.webp",
     "qtty":1
 },{
     "title":"Coconut Cream Pie",
     "description":"dreamy coconut cream pie filled with natural coconut flavor from coconut milk.",
     "price": 5.49,
-    "image":"./img/Coconut-Cream-Pie-.jpg",
+    "image":"./img/Coconut-Cream-Pie-.webp",
     "qtty":1
 }]`
 
 let Beverages =`[{
     "title":"Nutella Shake",
     "price": 5.49,
-    "image":"./img/Nutella.jpg",
+    "image":"./img/Nutella.webp",
     "qtty":1
 },{
     "title":"Mojito",
     "price": 10.49,
-    "image":"./img/mojito.jpg",
+    "image":"./img/mojito.webp",
     "qtty":1
 },{
     "title":"Beer",
     "price": 1.49,
-    "image":"./img/budweiser.jpg",
+    "image":"./img/Beer.webp",
     "qtty":1
 },{
     "title":"Coke",
-    "description":"dreamy coconut cream pie filled with natural coconut flavor from coconut milk.",
-    "price": 5.49,
-    "image":"./img/coke1.jpg",
+    "price": 2.49,
+    "image":"./img/coke.webp",
     "qtty":1
 }]`
