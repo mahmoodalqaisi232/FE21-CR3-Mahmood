@@ -51,26 +51,26 @@ document.getElementById("starters-button").addEventListener('click', function ()
   document.getElementById("dessertsRow").style.display="none"
   document.getElementById("beveragesRow").style.display="flex"
   sectionTitles.forEach((el,index)=>  index==3 ? el.style.display="block" : el.style.display="none");
-  })
+})
 
-const cartItems = [];
-var totalSum=[];
+var cartItems = [];
+var itemNumber = document.getElementById('items-number');
+itemNumber.style.background="none";
 
 function addtoCart(item,i) {
     if(cartItems.length==0){
       cartItems.push(item);
-      totalSum.push(item.price);
-      total()
-    }else if(cartItems.find((val) =>val.title == item.title)){
-      item.qtty++;
-      totalSum[i]= +(item.qtty * item.price).toFixed(2)
-      total()
-    }else{
+      itemNumber.innerHTML = cartItems.length;
+      itemNumber.style.background="black";
+    }else if(cartItems.find((val) => val.title == item.title)){
+        item.qtty++;   
+}
+    else{
       cartItems.push(item);
-      totalSum.push(item.price)
+      itemNumber.innerHTML = cartItems.length;
     }
 }
-let buttons = document.getElementsByClassName("card-btn");
+var buttons = document.getElementsByClassName("card-btn");
 for(let i =0; i<buttons.length;i++){
   buttons[i].addEventListener('click',function(){
     addtoCart(products[i],i);
@@ -79,21 +79,20 @@ for(let i =0; i<buttons.length;i++){
 }
 function createTableRow() {
   document.getElementById('tableBody').innerHTML = " ";
+
   for (let val of cartItems){
     document.getElementById('tableBody').innerHTML += `
-  <tr class="tableRow">
-   <td class="fs-5">${val.title}</td>
-   <td>
-       <button class="btn btn-danger qttyminus">-</button>
-       <span class="fw-bold fs-5 p-1 countContainer">${val.qtty}</span>
-      <button class="btn btn-success qttyplus">+</button>
-   </td>
-   <td class="fs-5 priceContainer">${(val.price * val.qtty).toFixed(2)}</td>
- </tr>`;
+  <div class="tableRow container-fluid d-flex justify-content-between w-100">
+   <div class="rowTiltle w-25">${val.title}</div>
+   <div class="rowQtty w-25 text-end">
+       <button class="btn btn-danger qttyminus btn-cart">-</button>
+       <span class="fw-bold  p-1 countContainer">${val.qtty}</span>
+      <button class="btn btn-success btn-cart qttyplus">+</button>
+   </div>
+   <div class="priceContainer w-25 text-center">${(val.price * val.qtty).toFixed(2)} <span><code> (total) ${val.qtty} item(s) </code></span> </div>
+ </div><br>`;
 }
   total()
-    
-
   var plusButtons= document.getElementsByClassName("qttyplus");
   var minusButtons =document.getElementsByClassName("qttyminus");
   for(let i =0; i<plusButtons.length;i++){  
@@ -105,49 +104,74 @@ function createTableRow() {
   })
  }
 }
+
 function plusQtty(i){
-  let sum=cartItems[i].qtty * cartItems[i].price;
   cartItems[i].qtty++;
   document.getElementsByClassName("countContainer")[i].innerHTML = cartItems[i].qtty;
-  document.getElementsByClassName("priceContainer")[i].innerHTML = (sum).toFixed(2);
-  if(cartItems[i].qtty >=2){
-    let sumAfterAdd= +(cartItems[i].qtty * cartItems[i].price).toFixed(2);
-    totalSum[i]=sumAfterAdd;
-    document.getElementsByClassName("priceContainer")[i].innerHTML = (sumAfterAdd).toFixed(2);
-    total()
-    log(totalSum)
-    }
+  document.getElementsByClassName("priceContainer")[i].innerHTML =`${+(cartItems[i].qtty * cartItems[i].price).toFixed(2)}<span><code> (total) ${cartItems[i].qtty} item(s) </code></span>`;
+  total()
 }
 function minusQtty(i) {
   if(cartItems[i].qtty>=2){
-  cartItems[i].qtty--;
-  document.getElementsByClassName("countContainer")[i].innerHTML = cartItems[i].qtty;
-  document.getElementsByClassName("priceContainer")[i].innerHTML = (cartItems[i].qtty * cartItems[i].price).toFixed(2);
-  totalSum[i]= +(cartItems[i].qtty * cartItems[i].price).toFixed(2);
-  total();
-  log(totalSum)
-}else{
-  removeItem(i)
-  log(totalSum)
+    cartItems[i].qtty--;
+    document.getElementsByClassName("countContainer")[i].innerHTML = cartItems[i].qtty;
+    document.getElementsByClassName("priceContainer")[i].innerHTML =` ${+(cartItems[i].qtty * cartItems[i].price).toFixed(2)}<span><code> (total) ${cartItems[i].qtty} item(s) </code></span>`;
+    total();
+  }else{ 
+    removeItem(i)
+    if (cartItems.length ==0) {
+      itemNumber.style.background="none";
+      itemNumber.innerHTML = " ";
+    }else{itemNumber.innerHTML = cartItems.length;}
+    
+
+  }
 }
-}
+
 function total() {
-  let FinalSum= totalSum.reduce((pre,curr)=>{
-    let resultSum =+(pre + curr).toFixed(2);
-    return resultSum
-  },0)
-  document.getElementById('totalContainer').innerHTML = FinalSum + " €";
-  if(FinalSum==0){
-    document.getElementById('totalContainer').innerHTML ="0.00 €";
+  let totalPrice=0;
+  for (let i = 0; i < cartItems.length; i++) {
+    totalPrice = +((cartItems[i].price * cartItems[i].qtty) + totalPrice).toFixed(2);
+    document.getElementById('totalContainer').innerHTML =totalPrice;
   }
 }
 function removeItem(i) {
-   totalSum.splice(i,1);
    cartItems.splice(i,1);
+   if (cartItems.length==0) {
+    document.getElementById('totalContainer').innerHTML ="0.00 €";
+   }
    total()
    createTableRow(); 
-  
 }
+
+var firstHeadingY = document.getElementsByClassName("section-title")[0].offsetTop;
+
+window.onscroll = function () {
+  if (window.scrollY >= window.innerHeight - firstHeadingY) {
+    document.getElementById('cart-icon').style.visibility="visible"
+  }
+  else{
+    document.getElementById('cart-icon').style.visibility="hidden";
+  }
+};
+
+
+
+var cartIcon= document.getElementById('cart-icon');
+cartIcon.addEventListener('click', ()=> {
+  document.getElementsByClassName('cartContainer')[0].classList.add("cartContainerShow");
+})
+
+
+var hideArrow = document.getElementById("arrow-cart");
+hideArrow.addEventListener('click', function () {
+  document.getElementsByClassName("cartContainer")[0].classList.remove("cartContainerShow");
+})
+var cartButton = document.getElementById("cart-button");
+cartButton.addEventListener("click", function () {
+  document.getElementsByClassName('cartContainer')[0].classList.add("cartContainerShow");
+})
+
 // // Function to calculate the Invoice with 4 Parameters
 // function calculateInvoice(starterPrice,maindishPrice,dessertPrice,beveragePrice){
 //     let Sum = Math.ceil(starterPrice) + Math.ceil(maindishPrice) + Math.ceil(dessertPrice) + Math.ceil(beveragePrice);
@@ -221,3 +245,4 @@ function removeItem(i) {
 // var test3=test2.splice(2,1)
 // log(test3)
 // log(test2)
+

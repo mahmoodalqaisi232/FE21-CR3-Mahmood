@@ -1,8 +1,8 @@
-.myNav {
-  background-color: #77f9d4 !important;
-  height: 15vh;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Saira:wght@100&display=swap');
+*{
+  font-family: 'Saira', sans-serif;
+  font-weight:900   ;
+ }
 .gal {
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
   -moz-column-count: 3; /* Firefox */
@@ -15,23 +15,132 @@
 }
 @media (max-width: 500px) {
   .gal {
-    -webkit-column-count: 1; /* Chrome, Safari, Opera */
-    -moz-column-count: 1; /* Firefox */
+    -webkit-column-count: 1; 
+    -moz-column-count: 1;
     column-count: 1;
   }
 }
 
-/* .imgContainer img {
-	height: auto;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-} */
 img:hover {
   transition: 0.1s ease-in;
   transform: scale(1.2);
 }
 
-footer {
-  background-color: #77f9d4 !important;
-  height: 15vh;
+.myNav {
+  background-color: #46ce7ac4;
+  width:100% ;
+  height: 5vw;
+  font-weight: bolder;
+}
+.logo{
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:3vw;
+  font-family: 'Comforter Brush', cursive;  
+}
+footer{
+  background-color: #46ce7ac4;
+}
+.footerMenu{
+  display: flex;
+  justify-content: space-around;
+  padding: 3vw;
+  font-weight: bolder;
+  width: 25%;
+}
+.footerLogo{
+  font-family: 'Comforter Brush', cursive; 
+  font-size:3vw;
+  font-weight: bold;
+}
+p > a{
+  text-decoration: none;
+}
+a{
+  color: black;;
+}
+a:hover{
+  color: whitesmoke;
+}
+footer p{
+  font-size: 1.7vw;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width:1023px) {
+  .myNav {
+    height: 8vw;
+  }
+  .logo{
+    height: 8vw; 
+  }
+  footer p{
+    font-size: 2vw;
+    margin-left: 1vw;
+  }
+}
+/* Mobile */
+@media screen and (min-width: 425px) and (max-width:767px){
+  .myNav {
+    height: 12vw;
+  }
+  .logo{
+    font-size: 6vw;
+    height: 12vw; 
+  }
+  .footerMenu{
+    width: 50%;
+  }
+  .footerLogo{
+    width: 50%;
+    font-size: 6vw;
+  }
+  footer p{
+    font-size: 4vw;
+  }
+}
+/* Small Screens */
+@media screen and (min-width: 375px) and (max-width:424px) {
+  .myNav {
+    height: 12vw;
+  }
+  .logo{
+    font-size: 8vw;
+    height: 12vw; 
+  }
+  .footerMenu{
+    width: 50%;
+  }
+  .footerLogo{
+    width: 50%;
+    font-size: 8vw;
+  }
+  footer p{
+    font-size: 5vw;
+    margin: 1vw;
+  }
+}
+/* tiny Screens */
+@media screen and (max-width:374px) {
+  .myNav {
+    height: 14vw;
+  }
+  .logo{
+    font-size: 9vw;
+    height: 14vw; 
+  }
+  .footerMenu{
+    width: 60%;
+  }
+  .footerLogo{
+    width: 40%;
+    font-size: 9vw;
+  }
+  footer p{
+    font-size: 6vw;
+    margin: 1vw;
+  }
 }
